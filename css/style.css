@@ -1,0 +1,299 @@
+
+:root {
+	--background-color: #fff;
+	--secondary-background-color: rgb(233, 233, 233);
+	--border-color: #aaa;
+	--text-color: #000;
+	--secondary-text-color: rgb(34, 34, 34);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #000;
+		--secondary-background-color: rgb(30, 30, 30);
+		--border-color: #444;
+		--text-color: #fff;
+		--secondary-text-color: rgb(230, 230, 230);
+	}
+}
+
+::selection {
+	color: #000;
+	background-color: rgb(255, 255, 0);
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	text-rendering: optimizeLegibility;
+}
+
+/* Localized Content */
+
+span[lang], option[lang],
+.lang-inline[lang], .lang-block[lang] { display: none; }
+
+html[lang="en"] span[lang="en"],
+html[lang="it"] span[lang="it"],
+html[lang="en"] .lang-inline[lang="en"],
+html[lang="it"] .lang-inline[lang="it"] {
+	display: inline;
+}
+
+html[lang="en"] option[lang="en"],
+html[lang="it"] option[lang="it"],
+html[lang="en"] .lang-block[lang="en"],
+html[lang="it"] .lang-block[lang="it"] {
+	display: block;
+}
+
+/* General Styles */
+
+body {
+	font-family: "Hanken Grotesk", sans-serif;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500 !important;
+	margin: 1rem 0   !important;
+}
+
+h1 { font-size: 2rem   !important; line-height: 2.5rem   !important; }
+h2 { font-size: 1.5rem !important; line-height: 2rem     !important; }
+h3 { font-size: 1.3rem !important; line-height: 1.75rem  !important; }
+h4 { font-size: 1.2rem !important; line-height: 1.625rem !important; }
+h5 { font-size: 1.1rem !important; line-height: 1.525rem !important; }
+h6 { font-size: 1rem   !important; line-height: 1.5rem   !important; }
+
+strong {
+	font-family: "Times", "Times New Roman", serif;
+	font-weight: 500;
+}
+
+button.icon-button {
+	font-size: 25px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+.hand-container {
+	margin: 1.5rem 0 !important;
+	user-select: text;
+}
+
+.hand-container p {
+	margin: 1rem 0 !important;
+}
+
+.hand-container h2 + div {
+	margin-top: 25px;
+}
+
+.hand {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 830px;
+}
+
+.combo {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.combo div {
+	text-align: center;
+}
+
+.combo:first-child div {
+	text-align: left;
+}
+
+.combo:last-child div {
+	text-align: right;
+}
+
+.info {
+	text-align: center;
+	word-break: break-all;
+	height: 25px;
+	margin: 6px 0;
+}
+
+.score {
+	float: right;
+	font-size: 18px;
+	padding: 5px;
+	line-height: 33px;
+}
+
+.empty {
+	display: block;
+	position: relative;
+	border-radius: 6px;
+	user-select: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.removed { visibility: hidden; }
+
+.stroke-color {
+	stroke: var(--secondary-text-color);
+}
+
+.searchbox {
+	width: calc(90% - 24px);
+	padding-left: 20px;
+	display: inline-block;
+	background-color: var(--secondary-background-color);
+	border: none;
+	border-radius: 25px;
+	color: var(--secondary-text-color);
+	font-size: 16px;
+	height: 40px;
+	padding: 0 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+.searchbox svg {
+	display: inline-block;
+	margin-top: -4px;
+}
+
+.searchbox input {
+	background: none;
+	border: none;
+	color: var(--secondary-text-color);
+	font-size: 16px;
+	height: 40px;
+	padding: 0;
+	margin: 0;
+}
+
+input[type="text"] {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	outline: none;
+}
+
+select {
+	background: none;
+	border: none;
+	border-radius: 10px;
+	color: var(--secondary-text-color);
+	font-size: 16px;
+	height: 40px;
+	padding: 10px 4px !important;
+	margin: 0 5px;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	outline: none;
+	cursor: pointer;
+}
+
+label {
+	font-weight: 500;
+	cursor: pointer;
+}
+
+label.tristate::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 5px;
+	vertical-align: top;
+	background-color: var(--secondary-background-color);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	appearance: none;
+	cursor: pointer;
+	margin: 2px 6px;
+}
+
+label.tristate[state="unk"]::before {
+	background-color: var(--secondary-background-color);
+}
+
+label.tristate[state="on"]::before {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='14' d='M30 48H70'/%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='14' d='M50 28V70'/%3E%3C/svg%3E");
+	background-color: #0d6efd;
+}
+
+label.tristate[state="off"]::before {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='14' d='M30 48H70'/%3E%3C/svg%3E");
+	background-color: #fd0d3d;
+	color: var(--secondary-text-color);
+}
+
+label.tristate[state="off"] {
+	color: var(--secondary-text-color);
+}
+
+@media only screen and (min-width: 900px) {
+	.mw-830 {
+		width: 830px;
+		max-width: 830px;
+		justify-content: space-around;
+		display: flex;
+		align-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+	label.tristate {
+		margin-top: 10px;
+		text-align: center;
+	}
+	button.icon-button {
+		font-size: 20px;
+	}
+	.mw-830 {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 25px;
+		justify-content: space-around;
+   		display: flex;
+		margin-top: 0 !important;
+	}
+	.hand {
+		width: 100%;
+		max-width: 100%;
+		flex-direction: unset;
+		align-items: start;
+		flex-wrap: wrap;
+		justify-content: normal;
+		column-gap: 10px;
+	}
+	.tile {
+		width: 42px !important;
+		height: 50px !important;
+		background-size: 32px 40px !important;
+		margin-top: 2px !important;
+	}
+	.tile[data-suit="d"]::before { font-size: 9px !important; }
+	.empty { font-size: 9px !important; }
+	.searchbox { width: 260px; }
+	.hand-container {
+		margin-top: 1.5rem !important;
+		border-bottom: 1px solid var(--border-color);
+		padding-bottom: 1.5rem !important;
+	}
+	.combo:last-child div { text-align: center !important; }
+}

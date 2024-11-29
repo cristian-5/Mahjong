@@ -1,0 +1,805 @@
+[{
+	"name": { "en": "Run, Pung and Pair", "it": "Scala, Pung e Paio" },
+	"score": 1200, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "O1O2O3O4O5O6O7O8O9 O8O8O8 O9O9",
+	"info": {
+		"en": [ "Run", "Pung", "Pair" ],
+		"it": [ "Scala", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Gates of Heaven", "it": "Porte del Paradiso" },
+	"score": 1300, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "C2C3C4C5C6C7C8 #1 C1C1C1 C9C9C9",
+	"info": {
+		"en": [ "Run 2-8", "", "Pung / Kong of 1s", "Pung / Kong of 9s" ],
+		"it": [ "Scala 2-8", "", "Pung / Kong di 1", "Pung / Kong di 9" ]
+	},
+	"blanks": [ "2-8" ]
+}, {
+	"name": { "en": "Confused Gates", "it": "Porte Confuse" },
+	"score": 1100, "description": {
+		"en": "All in three distinct suits.",
+		"it": "Tutto in tre semi distinti."
+	}, "example": "O2O3O4O5O6O7O8 #1 C1C1C1 B9B9B9",
+	"info": {
+		"en": [ "Run 2-8", "", "Pung / Kong of 1s", "Pung / Kong of 9s" ],
+		"it": [ "Scala 2-8", "", "Pung / Kong di 1", "Pung / Kong di 9" ]
+	}, "blanks": [ "2-8" ]
+}, {
+	"name": { "en": "Wriggly Snake", "it": "Serpente Contorto" },
+	"score": 1000, "example": "C1C2C3C4C5C6C7C8C9 WEWSWWWN #1",
+	"info": {
+		"en": [ "Run 1-9", "Every Wind" ],
+		"it": [ "Scala 1-9", "Tutti i Venti" ]
+	}, "blanks": { "en": [ "1-9\nor\nWind" ], "it": [ "1-9\no\nVento" ] }
+}, {
+	"name": { "en": "Guardian Winds", "it": "Venti Guardiani" },
+	"score": 1000, "example": "B1B2B3B4B5B6B7B8B9 WSWSWS WNWN",
+	"info": {
+		"en": [ "Run 1-9", "Pung of Winds", "Pair of Winds" ],
+		"it": [ "Scala 1-9", "Pung di Venti", "Paio di Venti" ]
+	}
+}, {
+	"name": { "en": "Guardian Dragons", "it": "Dragoni Guardiani" },
+	"score": 1000,
+	"example": "O1O2O3O4O5O6O7O8O9 DRDRDR DGDG",
+	"info": {
+		"en": [ "Run 1-9", "Pung of Dragons", "Pair of Dragons" ],
+		"it": [ "Scala 1-9", "Pung di Draghi", "Paio di Draghi" ]
+	}
+}, {
+	"name": { "en": "Five Odd Honours", "it": "Cinque Onori Dispari" },
+	"score": 600, "example": "C1C2C3C4C5C6C7C8C9 DGDRWSWWWN",
+	"info": {
+		"en": [ "Run 1-9", "5 Unique Honours" ],
+		"it": [ "Scala 1-9", "5 Onori Unici" ]
+	}
+}, {
+	"name": { "en": "Wriggly Dragon", "it": "Dragone Contorto" },
+	"score": 900, "example": "O1O2O3O4O5O6O7O8O9 DGDRDW DRDR",
+	"info": {
+		"en": [ "Run 1-9", "Every Dragon", "Pair of Dragons" ],
+		"it": [ "Scala 1-9", "Ogni Drago", "Paio di Draghi" ]
+	}
+}, {
+	"name": { "en": "Dragon’s Tail", "it": "Coda del Dragone" },
+	"score": 1100, "description": {
+		"it": "Pung di Draghi, Paio di Venti o _viceversa_.",
+		"en": "Pung of Dragons, Pair of Winds or _viceversa_."
+	}, "example": "C1C2C3C4C5C6C7C8C9 DRDRDR WWWW",
+	"info": {
+		"en": [ "Run 1-9", "Pung", "Pair" ],
+		"it": [ "Scala 1-9", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Dragon’s Run", "it": "Scala del Dragone" },
+	"score": 900, "example": "DGDRDW WNWN O1O2O3O4O5O6O7O8O9",
+	"info": {
+		"en": [ "Every Dragon", "Pair of Winds", "Run 1-9" ],
+		"it": [ "Ogni Drago", "Paio di Venti", "Scala 1-9" ]
+	}
+}, {
+	"name": { "en": "Bottlebrushes", "it": "Callistemon" },
+	"score": 1300, "description": {
+		"en": "All in *Bamboo*.",
+		"it": "Tutto in *Bamboo*."
+	}, "example": "DrDrDr B1B2B3B4B5B6B7B8B9 wNwN",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Run 1-9", "P of *Own* W †" ],
+		"it": [ "Pung di Draghi *Rossi*", "Scala 1-9", "P di V *Propri* †" ]
+	}
+}, {
+	"name": { "en": "Hachi Ban", "it": "Ottava" },
+	"score": 1000, "description": {
+		"en": "3 Pairs of Winds or 3 Pairs of Dragons (_not mixed_).",
+		"it": "3 Paia di Venti o 3 Paia di Draghi (_non misti_)."
+	}, "example": "B1B2B3B4B5B6B7B8 WEWE WSWS WWWW",
+	"info": {
+		"en": [ "Run 1-8 or 2-9" ],
+		"it": [ "Scala 1-8 o 2-9" ]
+	}
+}, {
+	"name": { "en": "Dragon’s Gates", "it": "Porte del Dragone" },
+	"score": 1100, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "B2B3B4B5B6B7B8 #1 B9B9B9 dGdGdG",
+	"info": {
+		"en": [ "Run 2-8", "", "Pung / Kong of 1s or 9s", "P / K of Dragons ‡" ],
+		"it": [ "Scala 2-8", "", "Pung / Kong di 1 o 9", "P / K di Draghi ‡" ]
+	}, "blanks": [ "2-8" ]
+}, {
+	"name": { "en": "Dragon’s Fangs", "it": "Zanne del Dragone" },
+	"score": 1400, "example": "C1C2C3C4C5C6C7 #1 DwDwDw DrDrDr",
+	"info": {
+		"en": [
+			"Run 1-7 o 2-8 in *Characters* or *Circles*", "",
+			"P / K of *White* Dragons", "P / K of *Red* Dragons"
+		],
+		"it": [
+			"Scala 1-7 o 2-8 in *Caratteri* o *Cerchi*", "",
+			"P / K di Draghi *Bianchi*", "P / K di Draghi *Rossi*"
+		]
+	}, "blanks": { "en": [ "1-7\nor\n2-8" ], "it": [ "1-7\no\n2-8" ] }
+}, {
+	"name": { "en": "Grand Sequence", "it": "Grande Sequenza" },
+	"score": 900, "example": "B1B2B3B4B5B6B7B8B9 #1 #2 DGDGDG",
+	"info": {
+		"en": [ "Run 1-9", "", "", "Pung / Kong of *Honours*" ],
+		"it": [ "Scala 1-9", "", "", "Pung / Kong di *Onori*" ]
+	}, "blanks": [ "1-9", "1-9" ]
+}, {
+	"name": { "en": "Greta’s Garden", "it": "Giardino di Greta" },
+	"score": 1000, "example": "B1B2B3B4B5B6B7 WEWSWWWN DGDRDW",
+	"info": {
+		"en": [ "Run 1-7", "Every Wind", "Every Dragon" ],
+		"it": [ "Scala 1-7", "Ogni Vento", "Ogni Drago" ]
+	}
+}, {
+	"name": { "en": "Greta’s Dragon", "it": "Dragone di Greta" },
+	"score": 1100, "example": "C1C2C3C4C5C6C7 WEWSWWWN DGDGDG",
+	"info": {
+		"en": [ "Run 1-7", "Every Wind", "Pung of Dragons" ],
+		"it": [ "Scala 1-7", "Ogni Vento", "Pung di Draghi" ]
+	}
+}, {
+	"name": { "en": "Dragon’s Scales", "it": "Squame del Dragone" },
+	"score": 1800, "description": {
+		"en": "All in _even_ *Characters*.",
+		"it": "Tutto in *Caratteri* _pari_."
+	}, "example": "DrDrDr C4C4C4 C6C6C6 C2C2C2 C8C8",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Rossi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Driven Snow", "it": "Neve Candida" },
+	"score": 1700, "description": {
+		"en": "All in _odd_ *Characters*.",
+		"it": "Tutto in *Caratteri* _dispari_."
+	}, "example": "DwDwDw C5C5C5 C9C9C9 C7C7C7 C1C1",
+	"info": {
+		"en": [ "Pung of *White* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Bianchi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Red Lantern", "it": "Lanterna Rossa" },
+	"score": 1400, "example": "O1O2O3O4O5O6O7 #1 DrDrDr wSwSwS",
+	"info": {
+		"en": [ "Run 1-7", "", "P / K of *Red* Dragons", "P / K of *Own* Winds †" ],
+		"it": [ "Scala 1-7", "", "P / K di Draghi *Rossi*", "P / K di Venti *Propri* †" ]
+	}, "blanks": [ "1-7" ]
+}, {
+	"name": { "en": "Gertie’s Garter", "it": "Giarrettiera di Gertrude" },
+	"score": 800, "description": {
+		"en": "Runs of two _distinct_ suits.",
+		"it": "Scale in due semi _distinti_."
+	},
+	"example": "B1B2B3B4B5B6B7 O1O2O3O4O5O6O7",
+	"info": {
+		"en": [ "Run 1-7", "Run 1-7" ],
+		"it": [ "Scala 1-7", "Scala 1-7" ]
+	}
+}, {
+	"name": { "en": "Yin Yang", "it": "Yin e Yang" },
+	"score": 1600, "description": {
+		"en": "First half in a suit, second half in another suit.",
+		"it": "Prima metà in un seme, seconda metà in un altro seme."
+	},
+	"example": "C1C1 C2C3C4 C5C5C O5O5 O6O7O8 O9O9",
+	"info": [ "1, 1", "2, 3, 4", "5, 5", "5, 5", "6, 7, 8", "9, 9" ]
+}, {
+	"name": { "en": "Moon at the Bottom of the Well", "it": "Luna in fondo al Pozzo" },
+	"score": 1500, "description": { "en": "All in *Circles*.", "it": "Tutto in *Cerchi*." },
+	"example": "O1O2O3 O3O4O5 O7O8O9 O1O2O3 O4O4",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Chow", "Pair" ],
+		"it": [ "Chow", "Chow", "Chow", "Chow", "Paio" ]
+	}
+}, {
+	"name": "Chow Chow", "score": 1400, "description": {
+		"en": "Last tile from the _wall_. All in the same suit.",
+		"it": "Ultima tessera dalla _muraglia_. Tutto nello stesso seme."
+	}, "example": "C2C3C4 C3C4C5 C7C8C9 C4C5C6 C1C1",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Chow", "Pair" ],
+		"it": [ "Chow", "Chow", "Chow", "Chow", "Paio" ]
+	}
+}, {
+	"name": { "en": "Crazy Chows", "it": "Chow Pazzi" },
+	"score": 1000, "example": "O4B5C6 O2B3C4 O6B7C8 O1B2C3 B6O6",
+	"info": {
+		"en": [ "Mixed Chow", "Mixed Chow", "Mixed Chow", "Mixed Chow", "Mixed Pair" ],
+		"it": [ "Chow Misto", "Chow Misto", "Chow Misto", "Chow Misto", "Paio Misto" ]
+	}
+}, {
+	"name": { "en": "Dahlia “Little Robert”", "it": "Dalia “Piccolo Roberto”" },
+	"score": 1000, "description": {
+		"en": "Chows in three _distinct_ suits.",
+		"it": "Chow in tre semi _distinti_."
+	}, "example": "C5C6C7 O4O5O6 B2B3B4 O3O3O3 B2B2",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Base Pung", "Base Pair" ],
+		"it": [ "Chow", "Chow", "Chow", "Pung Base", "Paio Base" ]
+	}
+}, {
+	"name": { "en": "Dahlia “Big Robert”", "it": "Dalia “Grande Roberto”" },
+	"score": 900, "description": {
+		"en": "Runs in three _distinct_ suits.",
+		"it": "Scale in tre semi _distinti_."
+	}, "example": "B4B5B6B7 O1O2O3O4 C6C7C8C9 WWWW",
+	"info": {
+		"en": [ "Run of 4 tiles", "Run of 4 tiles", "Run of 4 tiles", "Pair of Honours" ],
+		"it": [ "Scala di 4 tessere", "Scala di 4 tessere", "Scala di 4 tessere", "Paio di Onori" ]
+	}
+}, {
+	"name": { "en": "Little Brother", "it": "Fratellino" },
+	"score": 1100, "description": {
+		"en": "At least three _distinct_ suits.",
+		"it": "Almeno tre semi _distinti_."
+	}, "example": "B4B5B6 O2O3O4 C6C7C8 B5B6B7 wEwE",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Chow", "P of *Own* Winds †" ],
+		"it": [ "Chow", "Chow", "Chow", "Chow", "P di Venti *Propri* †" ]
+	}
+}, {
+	"name": { "en": "Three Philosophers", "it": "Tre Filosofi" },
+	"score": 800, "description": {
+		"en": "Chows in three _distinct_ suits.",
+		"it": "Chow in tre semi _distinti_."
+	}, "example": "C2C3C4 O6O7O8 B5B6B7 B4O5C6 B2B2",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Mixed Chow", "Base Pair" ],
+		"it": [ "Chow", "Chow", "Chow", "Chow Misto", "Paio Base" ]
+	}
+}, {
+	"name": { "en": "Three Professors", "it": "Tre Professori" },
+	"score": 1500, "example": "O6B7C8 O4B5C6 O2B3C4 DGDRDW wSwS",
+	"info": {
+		"en": [ "Mixed Chow", "Mixed Chow", "Mixed Chow", "Every Dragon", "P of *Own* Winds †" ],
+		"it": [ "Chow Misto", "Chow Misto", "Chow Misto", "Ogni Drago", "P di Venti *Propri* †" ]
+	}
+}, {
+	"name": { "en": "Hovering Angel", "it": "Angelo Custode" },
+	"score": 1400, "description": {
+		"en": "Chows in three _distinct_ suits.",
+		"it": "Chow in tre semi _distinti_."
+	}, "example": "B4B5B6 O2O3O4 C1C2C3 wNwNwN DRDR",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Pung of *Own* Winds †", "Pair of Dragons" ],
+		"it": [ "Chow", "Chow", "Chow", "Pung di Venti *Propri* †", "Paio di Draghi" ]
+	}
+}, {
+	"name": { "en": "Windy Chow", "it": "Chow dei Venti" },
+	"score": 900, "description": {
+		"en": "Chows in three _distinct_ suits.",
+		"it": "Chow in tre semi _distinti_."
+	}, "example": "B7B8B9 O2O3O4 C5C6C7 WEWSWWWN #1",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Every Wind" ],
+		"it": [ "Chow", "Chow", "Chow", "Ogni Vento" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Chop Suey", "it": "Verdure Bollite" },
+	"score": 1500, "description": {
+		"en": "Chows of 1, 2, 3 in three _distinct_ suits.",
+		"it": "Chow di 1, 2, 3 in tre semi _distinti_."
+	}, "example": "B1B2B3 O1O2O3 C1C2C3 WEWSWWWN #1",
+	"info": {
+		"en": [ "Chow 1, 2, 3", "Chow 1, 2, 3", "Chow 1, 2, 3", "Every Wind" ],
+		"it": [ "Chow 1, 2, 3", "Chow 1, 2, 3", "Chow 1, 2, 3", "Ogni Vento" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Chow Mein", "it": "Verdure Saltate" },
+	"score": 1500, "description": {
+		"en": "Chows of 7, 8, 9 in three _distinct_ suits.",
+		"it": "Chow di 7, 8, 9 in tre semi _distinti_."
+	}, "example": "B7B8B9 O7O8O9 C7C8C9 WEWSWWWN #1",
+	"info": {
+		"en": [ "Chow 7, 8, 9", "Chow 7, 8, 9", "Chow 7, 8, 9", "Every Wind" ],
+		"it": [ "Chow 7, 8, 9", "Chow 7, 8, 9", "Chow 7, 8, 9", "Ogni Vento" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Robin", "it": "Pettirosso" },
+	"score": 900, "description": {
+		"en": "Chow (_first suit_); two Chows (_second suit_); Chow and Pair (_third suit_).",
+		"it": "Chow (_primo seme_); due Chow (_secondo seme_); Chow e Paio (_terzo seme_)."
+	}, "example": "C5C6C7 B2B3B4 B6B7B8 O1O2O3 O7O7",
+	"info": {
+		"en": [ "Chow", "Chow", "Chow", "Chow", "Pair" ],
+		"it": [ "Chow", "Chow", "Chow", "Chow", "Paio" ]
+	}
+}, {
+	"name": { "en": "Up You Go", "it": "Salita" },
+	"score": 1700, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "WEWSWWWN O2 O4O4 O6O6O6 O8O8O8O8",
+	"info": {
+		"en": [ "Every Wind", "2", "4, 4", "6, 6, 6", "8, 8, 8, 8" ],
+		"it": [ "Ogni Vento", "2", "4, 4", "6, 6, 6", "8, 8, 8, 8" ]
+	}
+}, {
+	"name": { "en": "Down You Go", "it": "Discesa" },
+	"score": 1700, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "WEWSWWWN C2C2C2C2 C4C4C4 C6C6 C8",
+	"info": {
+		"en": [ "Every Wind", "2, 2, 2, 2", "4, 4, 4", "6, 6", "8" ],
+		"it": [ "Ogni Vento", "2, 2, 2, 2", "4, 4, 4", "6, 6", "8" ]
+	}
+}, {
+	"name": { "en": "Apple Blossom", "it": "Fiore di Melo" },
+	"score": 1500, "example": "O2B3C4 C6O7B8 B3O4C5 DwDwDw DgDg",
+	"info": {
+		"en": [ "Mixed Chow", "Mixed Chow", "Mixed Chow", "Pung of *White* Dragons", "P of *Green* D" ],
+		"it": [ "Chow Misto", "Chow Misto", "Chow Misto", "Pung di Draghi *Bianchi*", "P di D *Verdi*" ]
+	}
+}, {
+	"name": { "en": "Knitting Pairs", "it": "Maglia Doppia" },
+	"score": 900, "description": {
+		"en": "Only two _distinct_ suits. No Honours.",
+		"it": "Solo due semi _distinti_. Nessun Onore."
+	}, "example": "B1O1 B2O2 B2O2 B4O4 B5O5 B7O7 B8O8",
+	"info": {
+		"en": [ "Mixed Pair", "Mixed Pair", "Mixed Pair", "Mixed Pair", "Mixed Pair", "Mixed Pair", "Mixed Pair" ],
+		"it": [ "Paio Misto", "Paio Misto", "Paio Misto", "Paio Misto", "Paio Misto", "Paio Misto", "Paio Misto" ]
+	}
+}, {
+	"name": { "en": "Triple Knitting", "it": "Maglia Tripla" },
+	"score": 1000, "example": "B1O1C1 B4O4C4 B7O7C7 B9O9C9 B1C1",
+	"info": {
+		"en": [ "Mixed Pung", "Mixed Pung", "Mixed Pung", "Mixed Pung", "Mixed Pair" ],
+		"it": [ "Pung Misto", "Pung Misto", "Pung Misto", "Pung Misto", "Paio Misto" ]
+	}
+}, {
+	"name": { "en": "Sparrow’s Sanctuary", "it": "Tempio del Passerotto" },
+	"score": 1900, "description": {
+		"en": "All Pairs of _green_ *Bamboo*.",
+		"it": "Tutte Paia di *Bamboo* _verdi_."
+	}, "example": "B1B1B1B1 B2B2 B3B3 B4B4 B6B6 B8B8",
+	"info": [ "1, 1, 1, 1", "2, 2", "3, 3", "4, 4", "6, 6", "8, 8" ]
+}, {
+	"name": { "en": "All Pair", "it": "Tutte Paia" },
+	"score": 800, "description": {
+		"en": "At least a pair of *Honours*.",
+		"it": "Almeno un paio di *Onori*."
+	}, "example": "O1O1 O2O2 O8O8 O9O9 WEWE WSWS DGDG",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Pair", "Pair" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Paio", "Paio" ]
+	}
+}, {
+	"name": { "en": "All Pair Honours", "it": "Tutte Paia Onori" },
+	"score": 1100, "description": {
+		"en": "All pair of *Extended Honours* (1s, 9s, _Winds_, _Dragons_).",
+		"it": "Tutte paia di *Onori Estesi* (1, 9, _Venti_, _Draghi_)."
+	}, "example": "B1B1 B9B9 O9O9 C1C1 C9C9 WWWW DWDW",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Pair", "Pair" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Paio", "Paio" ]
+	}
+}, {
+	"name": { "en": "Heavenly Twins", "it": "Gemelli Celesti" },
+	"score": 1000, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "C1C1 C3C3 C4C4 C5C5 C6C6 C8C8 C9C9",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Pair", "Pair" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Paio", "Paio" ]
+	}
+}, {
+	"name": { "en": "Seven Twins", "it": "Sette Gemelli" },
+	"score": 700, "description": {
+		"en": "Last tile from the _wall_.",
+		"it": "Ultima tessera dalla _muraglia_."
+	}, "example": "B3B3 B5B5 O4O4 O9O9 C1C1 C7C7 WSWS",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Pair", "Pair" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Paio", "Paio" ]
+	}
+}, {
+	"name": { "en": "Windfall", "it": "Manna" },
+	"score": 1200, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "B2B2 B3B3 B4B4 B5B5 B8B8 WEWSWWWN",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Every Wind" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Ogni Vento" ]
+	}
+}, {
+	"name": { "en": "All Pair Jade", "it": "Tutte Paia Giada" },
+	"score": 1600, "description": {
+		"en": "All in _green_ *Bamboo* (2, 3, 4, 6, 8).",
+		"it": "Tutto in *Bamboo* _verdi_ (2, 3, 4, 6, 8)."
+	}, "example": "B2B2 B3B3 B4B4 B4B4 B6B6 B8B8 DgDg",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Pair", "P of *Green* D" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Paio", "P di D *Verdi*" ]
+	}
+}, {
+	"name": { "en": "All Pair Ruby Jade", "it": "Tutte Paia Rubino Giada" },
+	"score": 1700, "description": {
+		"en": "All in *Bamboo*. At least one _green_ Pair (2, 3, 4, 6, 8) and one _red_ (1, 5, 7, 9).",
+		"it": "Tutto in *Bamboo*. Almeno un Paio _verde_ (2, 3, 4, 6, 8) e uno _rosso_ (1, 5, 7, 9)."
+	}, "example": "DrDr DgDg B3B3 B5B5 B7B7 B8B8 B9B9",
+	"info": {
+		"en": [ "P of *Red* D", "P of *Green* D", "Pair", "Pair", "Pair", "Pair", "Pair" ],
+		"it": [ "P di D *Rossi*", "P di D *Verdi*", "Paio", "Paio", "Paio", "Paio", "Paio" ]
+	}
+}, {
+	"name": { "en": "Dragon’s Breath", "it": "Respiro del Dragone" },
+	"score": 1100, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "B1B1 B3B3 B5B5 B6B6 B8B8 DGDRDW #1",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Pair", "Pair", "Every Dragon" ],
+		"it": [ "Paio", "Paio", "Paio", "Paio", "Paio", "Ogni Drago" ]
+	}, "blanks": { "en": [ "Dragon" ], "it": [ "Drago" ] }
+}, {
+	"name": { "en": "Dragonette", "it": "Dragonetta" },
+	"score": 1400, "description": {
+		"en": "All in the same suit. No 1s or 9s.",
+		"it": "Tutto nello stesso seme. Nessun 1 o 9."
+	}, "example": "C4C4 C6C6 C8C8 WEWSWWWN DGDRDW #1",
+	"info": {
+		"en": [ "Pair", "Pair", "Pair", "Every Wind", "Every Dragon" ],
+		"it": [ "Paio", "Paio", "Paio", "Ogni Vento", "Ogni Drago" ]
+	}, "blanks": { "en": [ "Wind\nor\nDragon" ], "it": [ "Vento\no\nDrago" ] }
+}, {
+	"name": { "en": "Golden Gates", "it": "Cancelli d'Oro" },
+	"score": 1700, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "C2C2 C4C4 C6C6 C8C8 C9C9C9 dRdRdR",
+	"info": {
+		"en": [ "2, 2", "4, 4", "6, 6", "8, 8", "9, 9, 9 / 1, 1, 1", "Pung of Dragons ‡" ],
+		"it": [ "2, 2", "4, 4", "6, 6", "8, 8", "9, 9, 9 / 1, 1, 1", "Pung di Draghi ‡" ]
+	}
+}, {
+	"name": { "en": "Windy Dragons", "it": "Dragoni del Vento" },
+	"score": 1800, "example": "WEWE WSWS WWWW WNWN DGDGDG DRDRDR",
+	"info": {
+		"en": [ "East Pair", "South Pair", "West Pair", "North Pair", "Pung of Dragons", "Pung of Dragons" ],
+		"it": [ "Paio di Est", "Paio di Sud", "Paio di Ovest", "Paio di Nord", "Pung di Draghi", "Pung di Draghi" ]
+	}
+}, {
+	"name": { "en": "Windvane", "it": "Segnaventi" },
+	"score": 1300, "description": {
+		"en": "Pung in three _distinct_ suits.",
+		"it": "Pung in tre semi _distinti_."
+	}, "example": "WEWSWWWN #1 B5B5B5 O6O6O6 C8C8C8",
+	"info": {
+		"en": [ "Every Wind", "", "Pung", "Pung", "Pung" ],
+		"it": [ "Ogni Vento", "", "Pung", "Pung", "Pung" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Windy Ones", "it": "Venti dell'Uno" },
+	"score": 1700, "example": "WEWSWWWN #1 B1B1B1 O1O1O1 C1C1C1",
+	"info": {
+		"en": [ "Every Wind", "", "Pung of 1s", "Pung of 1s", "Pung of 1s" ],
+		"it": [ "Ogni Vento", "", "Pung di 1", "Pung di 1", "Pung di 1" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Windy Nines", "it": "Venti del Nove" },
+	"score": 1700, "example": "WEWSWWWN #1 B9B9B9 O9O9O9 C9C9C9",
+	"info": {
+		"en": [ "Every Wind", "", "Pung of 9s", "Pung of 9s", "Pung of 9s" ],
+		"it": [ "Ogni Vento", "", "Pung di 9", "Pung di 9", "Pung di 9" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Three Sisters", "it": "Tre Sorelle" },
+	"score": 1600, "example": "WEWSWWWN #1 B3B3B3 O3O3O3 C3C3C3",
+	"info": {
+		"en": [ "Every Wind", "", "Pung of 3s", "Pung of 3s", "Pung of 3s" ],
+		"it": [ "Ogni Vento", "", "Pung di 3", "Pung di 3", "Pung di 3" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Seven Brothers", "it": "Sette Fratelli" },
+	"score": 1600, "example": "WEWSWWWN #1 B7B7B7 O7O7O7 C7C7C7",
+	"info": {
+		"en": [ "Every Wind", "", "Pung of 7s", "Pung of 7s", "Pung of 7s" ],
+		"it": [ "Ogni Vento", "", "Pung di 7", "Pung di 7", "Pung di 7" ]
+	}, "blanks": { "en": [ "Wind" ], "it": [ "Vento" ] }
+}, {
+	"name": { "en": "Four Blessings", "it": "Quattro Benedizioni" },
+	"score": 1900, "example": "WEWEWE WSWSWS WWWWWW WNWNWN O9O9",
+	"info": {
+		"en": [ "East Pung", "South Pung", "West Pung", "North Pung", "Base Pair" ],
+		"it": [ "Pung di Est", "Pung di Sud", "Pung di Ovest", "Pung di Nord", "Paio Base" ]
+	}
+}, {
+	"name": { "en": "Fourfold Homely Happiness", "it": "Quadruplice Felicità Domestica" },
+	"score": 2000, "example": "WEWEWE WSWSWS WWWWWW WNWNWN DRDR",
+	"info": {
+		"en": [ "East Pung", "South Pung", "West Pung", "North Pung", "Pair of Dragons" ],
+		"it": [ "Pung di Est", "Pung di Sud", "Pung di Ovest", "Pung di Nord", "Paio di Draghi" ]
+	}
+}, {
+	"name": { "en": "Mahjong of the Mandarin", "it": "Mahjong del Mandarino" },
+	"score": 2000, "example": "WNWNWNWN WSWSWSWS WWWWWWWW wEwE",
+	"info": {
+		"en": [ "Kong of Winds", "Kong of Winds", "Kong of Winds", "P of *Own* W †" ],
+		"it": [ "Kong di Venti", "Kong di Venti", "Kong di Venti", "P di V *Propri* †" ]
+	}
+}, {
+	"name": { "en": "Dragonfly", "it": "Libellula Dragone" },
+	"score": 1300, "description": {
+		"en": "Pung in three _distinct_ suits.",
+		"it": "Pung in tre semi _distinti_."
+	}, "example": "DGDRDW B2B2B2 O6O6O6 C8C8C8 O5O5",
+	"info": {
+		"en": [ "Every Wind", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Ogni Vento", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Three Great Scolars", "it": "Tre Ottimi Scolari" },
+	"score": 1900, "example": "DgDgDg DrDrDr DwDwDw C8C8C8 #1#1",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung of *Red* Dragons", "Pung of *White* Dragons", "Pung / Chow", "Pair" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung di Draghi *Rossi*", "Pung di Draghi *Bianchi*", "Pung / Chow", "Paio" ]
+	}, "blanks": { "en": [ "Base\nor\nWind" ], "it": [ "Base\no\nVento" ] }
+}, {
+	"name": { "en": "Dragon’s Pearl", "it": "Perla del Dragone" },
+	"score": 1800, "description": {
+		"en": "All in *Circles*, only (2, 3, 4, 6, 8).",
+		"it": "Tutto in *Cerchi*, solo (2, 3, 4, 6, 8)."
+	}, "example": "DwDwDw O2O2O2 O6O6O6 O2O3O4 O8O8",
+	"info": {
+		"en": [ "Pung of *White* Dragons", "Pung", "Pung", "Chow 2, 3, 4", "Pair" ],
+		"it": [ "Pung di Draghi *Bianchi*", "Pung", "Pung", "Chow 2, 3, 4", "Paio" ]
+	}
+}, {
+	"name": { "en": "White Opal", "it": "Opale Bianca" },
+	"score": 1500, "description": {
+		"en": "All in *Circles*",
+		"it": "Tutto in *Cerchi*"
+	}, "example": "DwDwDw O4O4O4 O6O6O6 O7O7O7 O9O9",
+	"info": {
+		"en": [ "Pung of *White* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Bianchi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Red Coral", "it": "Corallo Rosso" },
+	"score": 1500, "description": {
+		"en": "All in *Characters*.",
+		"it": "Tutto in *Caratteri*."
+	}, "example": "DrDrDr C3C3C3 C5C5C5 C8C8C8 C9C9",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Rossi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Green Jade", "it": "Giada Verde" },
+	"score": 1500, "description": {
+		"en": "All in *Bamboo*.",
+		"it": "Tutto in *Bamboo*."
+	}, "example": "DgDgDg B1B1B1 B4B4B4 B7B7B7 B8B8",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Imperial Jade", "it": "Giada Imperiale" },
+	"score": 1700, "description": {
+		"en": "All in _green_ *Bamboo* (2, 3, 4, 6, 8).",
+		"it": "Tutto in *Bamboo* _verdi_ (2, 3, 4, 6, 8)."
+	}, "example": "DgDgDg B2B2B2 B3B3B3 B4B4B4 B6B6",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Lily of the Valley", "it": "Giglio della Valle (Mughetto)" },
+	"score": 2000, "description": {
+		"en": "All in _green_ *Bamboo* (2, 3, 4, 6, 8).",
+		"it": "Tutto in *Bamboo* _verdi_ (2, 3, 4, 6, 8)."
+	}, "example": "DgDgDg DwDwDw B2B2B2 B4B4B4 B8B8",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung of *White* Dragons", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung di Draghi *Bianchi*", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Lilly Pilly", "it": "Albero di Mirto" },
+	"score": 1700, "description": {
+		"en": "All in *Circles*",
+		"it": "Tutto in *Cerchi*"
+	}, "example": "DgDgDg DwDw O4O4O4 O8O8O8 O9O9O9",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "P of *White* D", "Pung", "Pung", "Pung" ],
+		"it": [ "Pung di Draghi *Verdi*", "P di D *Bianchi*", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Royal Ruby", "it": "Rubino Reale" },
+	"score": 1800, "description": {
+		"en": "All in _red_ *Bamboo* (1, 5, 7, 9).",
+		"it": "Tutto in *Bamboo* _rossi_ (1, 5, 7, 9)."
+	}, "example": "DrDrDr B1B1B1 B5B5B5 B7B7B7 B9B9",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Pung", "Pung", "Pung", "Pung" ],
+		"it": [ "Pung di Draghi *Rossi*", "Pung", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Ruby Jade", "it": "Giada Rubino" },
+	"score": 1700, "description": {
+		"en": "All in *Bamboo*. At least one _red_ Pung (1, 5, 7, 9) and one _green_ (2, 3, 4, 6, 8).",
+		"it": "Tutto in *Bamboo*. Almeno un Pung _rosso_ (1, 5, 7, 9) e uno _verde_ (2, 3, 4, 6, 8)."
+	}, "example": "DrDrDr DgDgDg B9B9B9 B2B2B2 B6B6",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Pung of *Green* Dragons", "Pung / Kong", "Pung / Kong", "Pair" ],
+		"it": [ "Pung di Draghi *Rossi*", "Pung di Draghi *Verdi*", "Pung / Kong", "Pung / Kong", "Pair" ]
+	}
+}, {
+	"name": { "en": "Red Lily", "it": "Giglio Rosso" },
+	"score": 1800, "description": {
+		"en": "All in _red_ *Bamboo* (1, 5, 7, 9).",
+		"it": "Tutto in *Bamboo* _rossi_ (1, 5, 7, 9)."
+	}, "example": "DrDrDr DwDwDw B5B5B5 B9B9B9 B7B7",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "Pung of *White* Dragons", "Pung / Kong", "Pung / Kong", "Pair" ],
+		"it": [ "Pung di Draghi *Rossi*", "Pung di Draghi *Bianchi*", "Pung / Kong", "Pung / Kong", "Pair" ]
+	}
+}, {
+	"name": { "en": "Red Waratah", "it": "Telopea Rossa" },
+	"score": 1600, "description": {
+		"en": "Pung in three _distinct_ suits.",
+		"it": "Pung in tre semi _distinti_."
+	}, "example": "DrDrDr DgDg B5B5B5 O6O6O6 C9C9C9",
+	"info": {
+		"en": [ "Pung of *Red* Dragons", "P of *Green* D", "Pung", "Pung", "Pung" ],
+		"it": [ "Pung di Draghi *Rossi*", "P di D *Verdi*", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Sunrise (Dawn)", "it": "Alba" },
+	"score": 1600, "description": {
+		"en": "Pung in three _distinct_ suits. No 1s or 9s.",
+		"it": "Pung in tre semi _distinti_. Nessun 1 o 9."
+	}, "example": "WeWeWe DwDw B5B5B5 O2O2O2 C4C4C4",
+	"info": {
+		"en": [ "*East* Pung", "P of *White* D", "Pung", "Pung", "Pung" ],
+		"it": [ "Pung *Est*", "P di D *Bianchi*", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Sunset (Dusk)", "it": "Tramonto" },
+	"score": 1600, "description": {
+		"en": "Pung in three _distinct_ suits. No 1s or 9s.",
+		"it": "Pung in tre semi _distinti_. Nessun 1 o 9."
+	}, "example": "WwWwWw DrDr B5B5B5 O6O6O6 C8C8C8",
+	"info": {
+		"en": [ "*West* Pung", "P of *Red* D", "Pung", "Pung", "Pung" ],
+		"it": [ "Pung *Ovest*", "P di D *Rossi*", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Odds and Evens", "it": "Dispari e Pari" },
+	"score": 1900, "description": {
+		"en": "All _odds_ in two _distinct_ suits, all _evens_ in the third suit.",
+		"it": "Tutti i _dispari_ in due semi _distinti_, tutti i _pari_ nel terzo seme."
+	}, "example": "B1B3B5B7B9 C1C3C5C7C9 O2O4O6O8",
+	"info": [ "1, 3, 5, 7, 9", "1, 3, 5, 7, 9", "2, 4, 6, 8" ]
+}, {
+	"name": { "en": "Blue Mountains", "it": "Montagne Blu" },
+	"score": 1700, "description": {
+		"en": "All in _blue_ *Circles* (2, 3, 4, 5, 8, 9).",
+		"it": "Tutto in *Cerchi* _blu_ (2, 3, 4, 5, 8, 9)."
+	}, "example": "DgDgDg O3O3O3 O2O2O2 O5O5O5 O9O9",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "White Elephant", "it": "Elefante Bianco" },
+	"score": 1800, "description": {
+		"en": "All in _even_ *Circles*.",
+		"it": "Tutto in *Cerchi* _pari_."
+	}, "example": "DwDwDw O4O4O4 O8O8O8 O2O2O2 O6O6",
+	"info": {
+		"en": [ "Pung of *White* Dragons", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung di Draghi *Bianchi*", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "Winds and Dragons", "it": "Venti e Dragoni" },
+	"score": 1900, "description": {
+		"en": "At least a Pung of *Winds* and a Pung of *Dragons*.",
+		"it": "Almeno un Pung di *Venti* e un Pung di *Draghi*."
+	}, "example": "WSWSWS WWWWWW DGDGDG DRDRDR DWDW",
+	"info": {
+		"en": [ "Pung of Honours", "Pung of Honours", "Pung of Honours", "Pung of Honours", "Pair of Honours" ],
+		"it": [ "Pung di Onori", "Pung di Onori", "Pung di Onori", "Pung di Onori", "Paio di Onori" ]
+	}
+}, {
+	"name": { "en": "Numbers in Parallel", "it": "Numeri in Parallelo" },
+	"score": 1600, "description": {
+		"en": "Pung and Pair, _both_ of Winds or _both_ of Dragons (_not mixed_). No 1s or 9s.",
+		"it": "Pung e Paio, _entrambi_ di Venti o _entrambi_ di Draghi (_non misti_). Nessun 1 o 9."
+	}, "example": "DGDGDG DRDR O8O8O8 B8B8B8 C8C8C8",
+	"info": {
+		"en": [ "P of Dragons / Winds", "P of D / W", "Pung", "Pung", "Pung" ],
+		"it": [ "P di Draghi / Venti", "P di D / V", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Numbers Doubled", "it": "Numeri in Doppio" },
+	"score": 1600, "description": {
+		"en": "Pungs of _only_ two numbers in two _distinct_ suits. No 1s or 9s.",
+		"it": "Pung di _soli_ due numeri in due semi _distinti_. Nessun 1 o 9."
+	}, "example": "WEWE O6O6O6 C6C6C6 O7O7O7 C7C7C7",
+	"info": {
+		"en": [ "Pair of Winds", "Pung", "Pung", "Pung", "Pung" ],
+		"it": [ "Paio di Venti", "Pung", "Pung", "Pung", "Pung" ]
+	}
+}, {
+	"name": { "en": "Unique Wonder", "it": "Unica Meraviglia" },
+	"score": 1300, "example": "B1O1C1 B9O9C9 WEWSWWWN DGDRDW #1",
+	"info": {
+		"en": [ "Mixed Pung of 1s", "Mixed Pung of 9s", "Every Wind", "Every Dragon" ],
+		"it": [ "Pung Misto di 1", "Pung Misto di 9", "Ogni Vento", "Ogni Drago" ]
+	}, "blanks": { "en": [ "1 / 9\nor\nHonour" ], "it": [ "1 / 9\no\nOnore" ] }
+}, {
+	"name": { "en": "Purity Hand", "it": "Mano della Purezza" },
+	"score": 1200, "description": {
+		"en": "All in the same suit.",
+		"it": "Tutto nello stesso seme."
+	}, "example": "C1C1C1 C2C2C2 C7C7C7 C9C9C9 C4C4",
+	"info": {
+		"en": [ "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pair" ],
+		"it": [ "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pung / Chow", "Paio" ]
+	}
+}, {
+	"name": { "en": "Chinese Odds", "it": "Dispari Cinesi" },
+	"score": 1400, "description": {
+		"en": "All _odds_ of the same suit.",
+		"it": "Tutti _dispari_ dello stesso seme."
+	}, "example": "C1C1C1 C3C3C3 C5C5C5 C7C7C7 C9C9",
+	"info": {
+		"en": [ "Pung", "Pung", "Pung", "Pung", "Pair" ],
+		"it": [ "Pung", "Pung", "Pung", "Pung", "Paio" ]
+	}
+}, {
+	"name": { "en": "All Honour Hand", "it": "Mano Tutti Onori" },
+	"score": 1600, "example": "B1B1B1 C9C9C9 O1O1O1 WNWNWN DRDR",
+	"info": {
+		"en": [ "Pung of E Honours", "Pung of E Honours", "Pung of E Honours", "Pung of E Honours", "P of E Honours" ],
+		"it": [ "Pung di Onori E", "Pung di Onori E", "Pung di Onori E", "Pung di Onori E", "P di O Estesi" ]
+	}
+}, {
+	"name": { "en": "Heads and Tails (1s or 9s)", "it": "Testacoda (1 o 9)" },
+	"score": 1600, "example": "B1B1B1 O9O9O9 C1C1C1 C9C9C9 O1O1",
+	"info": {
+		"en": [ "Pung of 1s / 9s", "Pung of 1s / 9s", "Pung of 1s / 9s", "Pung of 1s / 9s", "Pair of 1s / 9s" ],
+		"it": [ "Pung di 1 / 9", "Pung di 1 / 9", "Pung di 1 / 9", "Pung di 1 / 9", "Paio di 1 / 9" ]
+	}
+}, {
+	"name": { "en": "Ordinary Mahjong (Chicken Hand)", "it": "Mahjong Ordinario (Mano del Pollo)" },
+	"score": 500, "description": {
+		"en": "No _mixed_ combinations. No Honours. Last tile from the _wall_.",
+		"it": "Nessuna combinazione _mista_. Nessun Onore. Ultima tessera dalla _muraglia_."
+	}, "example": "C1C2C3 B5B5B5 O6O6O6 C4C4C4 B9B9",
+	"info": {
+		"en": [ "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pair" ],
+		"it": [ "Pung / Chow", "Pung / Chow", "Pung / Chow", "Pung / Chow", "Paio" ]
+	}
+}, {
+	"name": { "en": "Imperial Mahjong", "it": "Mahjong Imperiale" },
+	"score": 2000, "example": "DgDgDgDg DrDrDrDr DwDwDwDw wEwE",
+	"info": {
+		"en": [ "Kong of *Green* Dragons", "Kong of *Red* Dragons", "Kong of *White* Dragons", "P of *Own* W †" ],
+		"it": [ "Kong di Draghi *Verdi*", "Kong di Draghi *Rossi*", "Kong di Draghi *Bianchi*", "P di V *Propri* †" ]
+	}
+}, {
+	"name": { "en": "Crazy Monkey", "it": "Scimmia Impazzita" },
+	"score": 1900, "description": {
+		"en": "Last tile from the _wall_.",
+		"it": "Ultima tessera dalla _muraglia_."
+	}, "example": "DgDgDg DrDrDr DwDwDw DGDRDW WSWS",
+	"info": {
+		"en": [ "Pung of *Green* Dragons", "Pung of *Red* Dragons", "Pung of *White* Dragons", "Every Dragon", "P of Winds" ],
+		"it": [ "Pung di Draghi *Verdi*", "Pung di Draghi *Rossi*", "Pung di Draghi *Bianchi*", "Ogni Drago", "P di Venti" ]
+	}
+}]

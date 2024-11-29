@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🀄️</text></svg>'>
+	<title>Mahjong</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="/css/style.css?v=1.0.31">
+	<link rel="stylesheet" href="/css/mahjong.css?v=1.0.5">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/js/utilities.js"></script>
+	<script type="text/javascript" src="/js/main.js?v=1.0.2"></script>
+</head>
+<body class="flex flex-col items-center py-9">
+	<div class="mw-830 my-8">
+		<button class="icon-button" id="language" title="English" onclick="language_button()">🇬🇧</button>
+		<div class="searchbox">
+			<svg class="mr-2 h-5 w-5 stroke-color" fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+			</svg><input type="text" id="search" class="p-2 m-8" data-placeholder-en="Search by Name" data-placeholder-it="Ricerca per nome" onkeyup="search()">
+		</div>
+		<button class="icon-button" id="sort" title="Unordered" onclick="sort_button()">#️⃣</button>
+	</div>
+	<div class="flex flex-row mb-9 mw-830" style="gap:6px">
+		<label id="check-w" class="tristate" state="unk" onclick="cycle(this);search();">
+			<span lang="en">Winds</span><span lang="it">Venti</span>
+		</label>
+		<label id="check-d" class="tristate" state="unk" onclick="cycle(this);search();">
+			<span lang="en">Dragons</span><span lang="it">Draghi</span>
+		</label>
+		<div style="width:2em"></div>
+		<label id="check-r" class="tristate" state="unk" onclick="cycle(this);search();">
+			<span lang="en">Run</span><span lang="it">Scale</span>
+		</label>
+		<label id="check-c" class="tristate" state="unk" onclick="cycle(this);search();">Chow</label>
+		<div style="width:2em"></div>
+		<label id="check-4" class="tristate" state="unk" onclick="cycle(this);search();">Kong</label>
+		<label id="check-3" class="tristate" state="unk" onclick="cycle(this);search();">Pung</label>
+		<label id="check-2" class="tristate" state="unk" onclick="cycle(this);search();">
+			<span lang="en">Pair</span><span lang="it">Paia</span>
+		</label>
+		<script type="text/javascript">
+			const CV = ["off", "unk", "on"];
+			const next = s => CV[(CV.indexOf(s) + 1) % CV.length];
+			const cycle = e => $(e).attr("state", next($(e).attr("state")));
+		</script>
+	</div>
+	<div class="numbered flex flex-col mw-830" id="results"></div>
+	<script type="text/javascript">
+		function sort_button() {
+			const current = $("#sort").attr("title");
+			const TV = [ "Ascending", "Unordered", "Descending" ], V = [ "⬆️", "#️⃣", "⬇️" ];
+			const nextIndex = (TV.indexOf(current) + 1) % TV.length;
+			$("#sort").attr("title", TV[nextIndex]).text(V[nextIndex]);
+			search(); // sort the results accordingly.
+		}
+		function language_button() {
+			const current = $("html").attr("lang");
+			const i = LANGUAGES.findIndex(l => l[0] === current);
+			const next = LANGUAGES[(i + 1) % LANGUAGES.length];
+			$("#language").attr("title", next[1]).text(next[2]);
+			locale(); // set the page locale accordingly.
+		}
+		function locale() {
+			const current = $("html").attr("lang");
+			const i = LANGUAGES.findIndex(l => l[0] === current);
+			const next = LANGUAGES[(i + 1) % LANGUAGES.length];
+			$("html").attr("lang", next[0]);
+			const S = $("#search");
+			S.attr("placeholder", S.attr(`data-placeholder-${next[0]}`));
+		}
+		let HANDS = []; // preload hands:
+		fetch("js/hands.json").then(data => data.json()).then(tree => {
+			HANDS = markdown(tree);
+			const S = $("#search");
+			S.val("").attr("placeholder",
+				S.attr(`data-placeholder-${$("html").attr("lang")}`)
+			);
+			hands(HANDS, "#results");
+		});
+	</script>
+</body>
+</html>
