@@ -1,7 +1,7 @@
 
 # 🀄️ Mahjong Western Special Hands
 
-A comprehensive list of Mahjong special hands, made with ❤️.
+A comprehensive list of Mahjong special hands, made with ❤️;
 Graphics by [Cangjie6](https://demching.itch.io/mahjong) 💝.
 
 > Note that the adopted score for a given hand has been calculated
